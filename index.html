@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FP Sellection</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Open+Sans:ital,wght@1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Imagem de logo -->
+      <img src="./img/logo.png" alt="Logo do site" />
+
+      <!-- Barra de Navegação -->
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Carros</li>
+          <li>Fale Conosco</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container">
+      <!-- div principal -->
+      <div class="list">
+        <!-- cada (div class="item") representa o local onde a imagem e a descrição vão ser inseridas -->
+
+        <!-- Carro 1 -->
+        <div class="item active">
+          <!-- Espaço referente a imagem do carro -->
+          <div class="car-img">
+            <img src="./img/bmw.png" alt="BMW I8 de lado" />
+          </div>
+
+          <!-- Conteúdo da imagem -->
+          <div class="content">
+            <!-- Modelo -->
+            <h2 class="car-information">BMW I8</h2>
+
+            <!-- Descrição da imagem -->
+            <p class="description">
+              O BMW i8 é um dos modelos mais icônicos da montadora alemã,
+              representando a fusão perfeita entre tecnologia e design. Lançado
+              em 2014, o i8 rapidamente se tornou um símbolo de inovação no
+              setor automotivo, destacando-se por sua motorização híbrida e
+              estética futurista.
+            </p>
+
+            <!-- Butão para mais informações do veículo -->
+            <button class="information">Saiba Mais</button>
+          </div>
+        </div>
+
+        <!-- Carro 2 -->
+        <div class="item">
+          <!-- Espaço referente a imagem do carro -->
+          <div class="car-img">
+            <img src="./img/audi.png" alt="Audi R8 de lado" />
+          </div>
+
+          <!-- Conteúdo da imagem -->
+          <div class="content">
+            <!-- Modelo -->
+            <h2 class="car-information">Audi R8</h2>
+
+            <!-- Descrição da imagem -->
+            <p class="description">
+              O Audi R8 é um supercarro esportivo alemão que se despede do
+              mercado após 14 anos de produção e duas gerações. O último
+              exemplar do modelo foi um cupê amarelo Vegas na versão Performance
+              Quattro Edition.
+            </p>
+
+            <!-- Butão para mais informações do veículo -->
+            <button class="information">Saiba Mais</button>
+          </div>
+        </div>
+
+        <!-- Carro 3 -->
+        <div class="item">
+          <!-- Espaço referente a imagem do carro -->
+          <div class="car-img">
+            <img
+              src="./img/lamborghini.png"
+              alt="Lamborghini Centenario 2016 de lado"
+            />
+          </div>
+
+          <!-- Conteúdo da imagem -->
+          <div class="content">
+            <!-- Modelo -->
+            <h2 class="car-information">Lamborghini</h2>
+
+            <!-- Descrição da imagem -->
+            <p class="description">
+              O Lamborghini Centenario é um carro superesportivo, criado para
+              comemorar o centenário do fundador da marca, Ferruccio
+              Lamborghini. O carro foi lançado no Salão de Genebra e teve
+              produção limitada a 40 unidades, sendo 20 cupês e 20 roadsters.
+            </p>
+
+            <!-- Butão para mais informações do veículo -->
+            <button class="information">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button id="prev"><img src="./img/arrow.png" alt="Próximo" /></button>
+        <button id="next"><img src="./img/arrow.png" alt="Anterior" /></button>
+      </div>
+
+      <div class="indicators">
+        <div class="number">01</div>
+        <ul>
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+  </body>
+</html>
