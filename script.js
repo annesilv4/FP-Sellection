@@ -35,3 +35,11 @@ prevButton.onclick = () => {
     setSlider()
     items[active].classList.add('active');
 }
+
+
+const IconMenu = document.getElementById('icon-menu'); // PEGANDO O ID DO ICON MENU
+const menu = document.querySelector('nav'); // PEGANDO A CLASS DO MENU
+
+IconMenu.addEventListener('click', () => {
+    menu.classList.toggle('open-menu');
+});
