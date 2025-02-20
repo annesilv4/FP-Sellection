@@ -279,7 +279,7 @@ section {
 }
 
 /* MEDIA QUERIE */
-@media (max-width: 900px) {
+@media (max-width: 420px) {
     header {
         position: absolute;
 
