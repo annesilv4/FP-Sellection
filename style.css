@@ -340,6 +340,9 @@ section {
 
             & .item {
                 & .car-img {
+                    position: relative;
+                    top: 500px;
+
                     &::before {
                         content: none;
                     }
@@ -397,7 +400,7 @@ section {
             & ul {
                 position: absolute;
                 top: 40px;
-                left: 120px;
+                left: 90px;
             }
         }
     }
