@@ -294,16 +294,19 @@ section {
                     display: none;
                 }
             }
+        }
 
-            & .hidden {
-                width: 45vw;
-                display: flex;
-                cursor: pointer;
-                justify-content: end;
+        & .hidden {
+            width: 45vw;
+            display: flex;
+            cursor: pointer;
+            justify-content: end;
+            position: relative;
+            left: 180px;
+            top: -32px;
 
-                & i {
-                    font-size: 20px;
-                }
+            & i {
+                font-size: 20px;
             }
         }
 
@@ -315,7 +318,7 @@ section {
                 position: absolute;
                 left: -2px;
                 width: 100%;
-                top: 60px;
+                top: 40px;
                 color: #fff;
                 box-shadow: 0px 4px 10px #000;
 
