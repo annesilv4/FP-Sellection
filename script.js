@@ -5,6 +5,8 @@ let items = container.querySelectorAll('.list .item');
 let indicator = document.querySelector('.indicators');
 let dots = indicator.querySelectorAll('ul li');
 let list = container.querySelector('.list');
+const IconMenu = document.getElementById('icon-menu'); // PEGANDO O ID DO ICON MENU
+const menu = document.querySelector('nav'); // PEGANDO A CLASS DO MENU
 
 let active = 0
 let firstPosition = 0
@@ -35,10 +37,6 @@ prevButton.onclick = () => {
     setSlider()
     items[active].classList.add('active');
 }
-
-
-const IconMenu = document.getElementById('icon-menu'); // PEGANDO O ID DO ICON MENU
-const menu = document.querySelector('nav'); // PEGANDO A CLASS DO MENU
 
 IconMenu.addEventListener('click', () => {
     menu.classList.toggle('open-menu');
