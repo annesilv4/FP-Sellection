@@ -280,130 +280,136 @@ section {
 
 /* MEDIA QUERIE */
 @media (max-width: 420px) {
-    header {
-        position: absolute;
+    body {
+        position: fixed;
+        width: 420px;
+        height: 910px;
 
-        & img {
-            width: 34vw;
-        }
+        & header {
+            position: absolute;
 
-        & nav {
+            & img {
+                width: 34vw;
+            }
 
-            & ul {
-                & li {
-                    display: none;
+            & nav {
+
+                & ul {
+                    & li {
+                        display: none;
+                    }
                 }
             }
-        }
 
-        & .hidden {
-            width: 45vw;
-            display: flex;
-            cursor: pointer;
-            justify-content: end;
-            position: relative;
-            left: 180px;
-            top: -32px;
-
-            & i {
-                font-size: 20px;
-            }
-        }
-
-        & .open-menu {
-            & ul {
-                align-items: center;
+            & .hidden {
+                width: 45vw;
                 display: flex;
-                flex-direction: column;
-                position: absolute;
-                left: -2px;
-                width: 100%;
-                top: 40px;
-                color: #fff;
-                box-shadow: 0px 4px 10px #000;
+                cursor: pointer;
+                justify-content: end;
+                position: relative;
+                left: 180px;
+                top: -32px;
 
-                & li {
-                    display: block;
+                & i {
+                    font-size: 20px;
+                }
+            }
 
-                    & a {
-                        &:hover {
-                            color: #000;
+            & .open-menu {
+                & ul {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    left: -2px;
+                    width: 100%;
+                    top: 40px;
+                    color: #fff;
+                    box-shadow: 0px 4px 10px #000;
+
+                    & li {
+                        display: block;
+
+                        & a {
+                            &:hover {
+                                color: #000;
+                            }
                         }
                     }
                 }
             }
         }
-    }
 
-    section {
-        & .list {
-            &::before {
-                border-top: none;
-            }
+        section {
+            & .list {
+                &::before {
+                    border-top: none;
+                }
 
-            & .item {
-                & .car-img {
-                    position: relative;
-                    top: 500px;
+                & .item {
+                    & .car-img {
+                        position: relative;
+                        top: 500px;
 
-                    &::before {
-                        content: none;
+                        &::before {
+                            content: none;
+                        }
+
+                        & img {
+                            position: absolute;
+                            top: -150px;
+                            width: 70vw;
+                            transform: none;
+                        }
                     }
 
+                    & .content {
+
+                        & .car-information {
+                            font-size: 80px;
+                            position: absolute;
+                            font-size: 3rem;
+                            left: 60px;
+                            top: 300px;
+                        }
+
+                        & .description {
+                            position: relative;
+                            top: 150px;
+                            left: 45px;
+                            font-size: 10px;
+                            text-align: justify;
+                        }
+
+                        & .information {
+                            position: relative;
+                            top: 150px;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+            & .arrows {
+                width: 95vw;
+
+                & button {
                     & img {
-                        position: absolute;
-                        top: -150px;
-                        width: 70vw;
-                        transform: none;
-                    }
-                }
-
-                & .content {
-
-                    & .car-information {
-                        font-size: 80px;
-                        position: absolute;
-                        font-size: 3rem;
-                        left: 60px;
-                        top: 300px;
-                    }
-
-                    & .description {
-                        position: relative;
-                        top: 150px;
-                        left: 45px;
-                        font-size: 10px;
-                        text-align: justify;
-                    }
-
-                    & .information {
-                        position: relative;
-                        top: 150px;
-                        align-items: center;
+                        width: 20px;
                     }
                 }
             }
-        }
 
-        & .arrows {
-            width: 95vw;
-
-            & button {
-                & img {
-                    width: 20px;
+            & .indicators {
+                & .number {
+                    display: none;
                 }
-            }
-        }
 
-        & .indicators {
-            & .number {
-                display: none;
-            }
-
-            & ul {
-                position: absolute;
-                top: 40px;
-                left: 90px;
+                & ul {
+                    position: absolute;
+                    top: 40px;
+                    left: 90px;
+                }
             }
         }
     }
