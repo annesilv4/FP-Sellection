@@ -1,3 +1,5 @@
+// SCRIPT DA HOME PEGE
+
 // List of all the cars
 const cars = [
     {
@@ -131,3 +133,5 @@ prevButton.onclick = () => {
 iconMenu.addEventListener('click', () => {
     menu.classList.toggle('open-menu');
 });
+
+// FIM DO SCRIPT DA HOME PAGE
