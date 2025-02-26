@@ -23,6 +23,53 @@ const cars = [
 // Place where you will receive the cars
 const listCars = document.querySelector('.list');
 
+
+// --------------------------------------------------------------
+
+
+let prevButton = document.getElementById('prev');
+let nextButton = document.getElementById('next');
+let container = document.querySelector('.container');
+let indicator = document.querySelector('.indicators');
+let dots = indicator.querySelectorAll('ul li');
+let list = container.querySelector('.list');
+const iconMenu = document.getElementById('icon-menu'); // PEGANDO O ID DO ICON MENU
+const menu = document.querySelector('nav'); // PEGANDO A CLASS DO MENU
+
+let active = 0;
+let firstPosition = 0;
+let lastPosition = 0;  // Atualize o lastPosition após a renderização dos itens
+let items = [];
+
+// Function to set the slider
+function setSlider() {
+    items = container.querySelectorAll('.list .item');  // Atualize items após a renderização
+    lastPosition = items.length - 1;  // Atualize a última posição após a renderização
+
+    if (!items.length) return;
+
+    // Remove a classe 'active' de todos os itens
+    items.forEach(item => item.classList.remove('active'));
+
+    // Apenas o primeiro item recebe a classe 'active'
+    items[active].classList.add('active');
+
+    // Atualiza os indicadores (se existirem)
+    const indicator = document.querySelector('.indicators');
+    if (indicator) {
+        const dots = indicator.querySelectorAll('ul li');
+        let dotsOld = document.querySelector('.indicators ul li.active');
+        if (dotsOld) dotsOld.classList.remove('active');
+        if (dots.length > 0) dots[active].classList.add('active');
+    }
+
+    const numberIndicator = document.querySelector('.indicators .number');
+    if (numberIndicator) {
+        numberIndicator.innerHTML = '0' + (active + 1);
+    }
+}
+
+
 // Function to show cars
 function addToCars() {
     listCars.innerHTML = '';
@@ -30,7 +77,6 @@ function addToCars() {
     cars.forEach((car, index) => {
         const divItem = document.createElement('div');
         divItem.classList.add('item', 'active');
-        if (index === 0) divItem.classList.add('active');
 
         const divImage = document.createElement('div');
         divImage.classList.add('car-img');
@@ -59,62 +105,27 @@ function addToCars() {
         listCars.appendChild(divItem);
         divItem.appendChild(divImage);
         divItem.appendChild(divContent);
+
+        if (index === 0) {
+            divItem.classList.add('active');
+        }
     });
+
+    setSlider();
 }
 
 addToCars();
 
-
-// --------------------------------------------------------------
-
-
-let prevButton = document.getElementById('prev');
-let nextButton = document.getElementById('next');
-let container = document.querySelector('.container');
-let items = container.querySelectorAll('.list .item');
-let indicator = document.querySelector('.indicators');
-let dots = indicator.querySelectorAll('ul li');
-let list = container.querySelector('.list');
-const iconMenu = document.getElementById('icon-menu'); // PEGANDO O ID DO ICON MENU
-const menu = document.querySelector('nav'); // PEGANDO A CLASS DO MENU
-
-let active = 0
-let firstPosition = 0
-let lastPosition = items.length - 1
-
-// Function to set the slider
-function setSlider() {
-    if (!items.length) return;
-
-    let itemOld = document.querySelector('.list .item.active');
-    if (itemOld) itemOld.classList.remove('active');
-
-    items[active].classList.add('active');
-
-    if (dots.length) {
-        let dotsOld = document.querySelector('.indicators ul li.active');
-        if (dotsOld) dotsOld.classList.remove('active');
-        dots[active].classList.add('active');
-    }
-
-    let numberIndicator = document.querySelector('.indicators .number');
-    if (numberIndicator) {
-        numberIndicator.innerHTML = '0' + (active + 1);
-    }
-}
-
 nextButton.onclick = () => {
     list.style.setProperty('--calculation', 1)
     active = active + 1 > lastPosition ? 0 : active + 1
-    setSlider()
-    items[active].classList.add('active');
+    setSlider();
 }
 
 prevButton.onclick = () => {
     list.style.setProperty('--calculation', -1)
     active = active - 1 < firstPosition ? lastPosition : active - 1
-    setSlider()
-    items[active].classList.add('active');
+    setSlider();
 }
 
 iconMenu.addEventListener('click', () => {
