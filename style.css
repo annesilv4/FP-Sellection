@@ -188,11 +188,15 @@ section {
         & .number {
             font-size: 5em;
             font-family: "League Gothic", sans-serif;
+            position: relative;
+            left: 45%;
         }
 
         & ul {
             display: flex;
             gap: 10px;
+            position: relative;
+            left: 42%;
 
             & li {
                 width: 50px;
