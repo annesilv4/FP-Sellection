@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FP Sellection</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-
+    <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -32,6 +31,7 @@
     />
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <!-- Imagem de logo -->
       <img src="./img/logo.png" alt="Logo do site" />
@@ -40,8 +40,8 @@
       <nav class="">
         <ul>
           <li><a href="index.html" target="_self">Home</a></li>
-          <li><a href="">Carros</a></li>
-          <li><a href="">Fale Conosco</a></li>
+          <li><a href="carros.html" target="_self">Veículos</a></li>
+          <li><a href="contato.html" target="_self">Fale Conosco</a></li>
         </ul>
       </nav>
 
@@ -49,29 +49,39 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </header>
+    <!-- FIM HEADER -->
 
+    <!-- CONTAINER -->
     <section class="container">
-      <!-- div principal -->
-      <div class="list">
-        <!-- cada (div class="item") representa o local onde a imagem e a descrição vão ser inseridas -->
+      <!-- DIV PRINCIPAL -->
+
+      <div class="veiculo-option">
+        <select id="opcoes" name="opcoes">
+          <option value="all" disabled selected hidden>VEÍCULOS</option>
+          <option value="cars">CARROS</option>
+          <option value="motorcycles">MOTOS</option>
+        </select>
       </div>
 
+      <!-- LIST -->
+      <div class="list">
+        <!-- OBS: cada (div class="item") representa o local onde a imagem e a descrição vão ser inseridas -->
+      </div>
+      <!-- FIM LIST -->
+
+      <!-- ARROWS -->
       <div class="arrows">
         <button id="prev"><img src="./img/arrow.png" alt="Próximo" /></button>
         <button id="next"><img src="./img/arrow.png" alt="Anterior" /></button>
       </div>
+      <!-- FIM ARROWS -->
 
-      <div class="indicators">
-        <div class="number">01</div>
-        <ul>
-          <li class="active"></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
+      <!-- FIM DIV PRINCIPAl -->
     </section>
+    <!-- FIM CONTAINER -->
 
-    <!-- JavaScript -->
-    <script src="./script.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="./JS/script.js" type="module"></script>
+    <!-- FIM JAVASCRIPT -->
   </body>
 </html>
