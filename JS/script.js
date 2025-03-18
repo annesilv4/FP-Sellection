@@ -94,6 +94,29 @@ function setSlider() {
     }
 }
 
+// ADICIONANDO SUPORTE A GESTOS PARA TELAS COM LARGURA MÁXIMA DE 420PX
+if (window.innerWidth <= 420) {
+    let startX = 0;
+    let endX = 0;
+
+    container.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    container.addEventListener('touchmove', (e) => {
+        endX = e.touches[0].clientX;
+    });
+
+    container.addEventListener('touchend', () => {
+        if (startX > endX + 50) {
+            active = active + 1 > lastPosition ? 0 : active + 1;
+            setSlider();
+        } else if (startX < endX - 50) {
+            active = active - 1 < firstPosition ? lastPosition : active - 1;
+            setSlider();
+        }
+    });
+}
 
 
 // Function to show cars

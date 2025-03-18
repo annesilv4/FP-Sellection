@@ -74,7 +74,12 @@ section {
 
             & option {
                 color: black;
-                font-size: 16px;
+                width: 7rem;
+                border-radius: 10px;
+            }
+
+            &:hover {
+                border: 3px solid #d9d9d9;
             }
         }
     }
@@ -377,8 +382,12 @@ section {
         section {
 
             & .veiculo-option {
-                top: 200px;
+                top: 150px;
                 left: 20px;
+
+                & select {
+                    width: 7rem;
+                }
             }
 
             & .list {
@@ -431,13 +440,7 @@ section {
             }
 
             & .arrows {
-                width: 95vw;
-
-                & button {
-                    & img {
-                        width: 20px;
-                    }
-                }
+                display: none;
             }
 
             & .indicators {
