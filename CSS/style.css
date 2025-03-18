@@ -70,6 +70,7 @@ section {
             border-radius: 10px;
             color: #d9d9d9;
             font-size: 15px;
+            cursor: pointer;
 
             & option {
                 color: black;
@@ -374,6 +375,12 @@ section {
         }
 
         section {
+
+            & .veiculo-option {
+                top: 200px;
+                left: 20px;
+            }
+
             & .list {
                 &::before {
                     border-top: none;
@@ -401,7 +408,7 @@ section {
                         & .car-information {
                             font-size: 80px;
                             position: absolute;
-                            font-size: 3rem;
+                            font-size: 2rem;
                             left: 60px;
                             top: 300px;
                         }
@@ -435,13 +442,21 @@ section {
 
             & .indicators {
                 & .number {
-                    display: none;
+                    position: relative;
+                    top: -167px;
+                    font-size: 3rem;
+                    left: 158px;
                 }
 
                 & ul {
                     position: absolute;
                     top: 40px;
-                    left: 90px;
+                    left: 120px;
+                    width: auto;
+
+                    & li {
+                        width: 10px;
+                    }
                 }
             }
         }

@@ -43,7 +43,8 @@ export const cars = [
         image: './img/yamaha-yzf-r6.png',
         description: 'A Yamaha R6 é uma motocicleta esportiva com um motor de alto desempenho. A versão R6 Race foi desenvolvida exclusivamente para uso em pista.',
         category: 'motorcycles'
-    }
+    },
+
 ];
 
 
