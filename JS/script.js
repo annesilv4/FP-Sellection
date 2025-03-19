@@ -100,14 +100,26 @@ if (window.innerWidth <= 420) {
     let endX = 0;
 
     container.addEventListener('touchstart', (e) => {
+        // Verifica se o toque começou em um select ou botão "Saiba Mais!"
+        if (e.target.tagName === 'SELECT' || e.target.classList.contains('information')) {
+            return;
+        }
         startX = e.touches[0].clientX;
     });
 
     container.addEventListener('touchmove', (e) => {
+        // Verifica se o toque está em um select ou botão "Saiba Mais!"
+        if (e.target.tagName === 'SELECT' || e.target.classList.contains('information')) {
+            return;
+        }
         endX = e.touches[0].clientX;
     });
 
-    container.addEventListener('touchend', () => {
+    container.addEventListener('touchend', (e) => {
+        // Verifica se o toque terminou em um select ou botão "Saiba Mais!"
+        if (e.target.tagName === 'SELECT' || e.target.classList.contains('information')) {
+            return;
+        }
         if (startX > endX + 50) {
             active = active + 1 > lastPosition ? 0 : active + 1;
             setSlider();

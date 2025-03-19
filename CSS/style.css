@@ -68,7 +68,7 @@ section {
             height: 60px;
             border: 3px solid #000;
             border-radius: 10px;
-            color: #d9d9d9;
+            color: #beff1b;
             font-size: 15px;
             cursor: pointer;
 
@@ -79,7 +79,7 @@ section {
             }
 
             &:hover {
-                border: 3px solid #d9d9d9;
+                border: 3px solid #beff1b;
             }
         }
     }
@@ -386,7 +386,22 @@ section {
                 left: 20px;
 
                 & select {
-                    width: 7rem;
+                    width: 5rem;
+                    height: 35px;
+                    border-radius: 4px;
+                    padding-left: 2px;
+                    -webkit-appearance: none;
+                    /* Remove o ícone padrão do select no Safari e Chrome */
+                    -moz-appearance: none;
+                    /* Remove o ícone padrão do select no Firefox */
+                    appearance: none;
+                    /* Remove o ícone padrão do select no Edge e IE */
+                    background: transparent;
+                    /* Torna o fundo transparente para ocultar o ícone */
+
+                    & i {
+                        user-select: none;
+                    }
                 }
             }
 
