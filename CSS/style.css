@@ -424,6 +424,8 @@ section {
                             top: -250px;
                             width: 70vw;
                             transform: none;
+                            height: 200px;
+                            object-fit: contain;
                         }
                     }
 
