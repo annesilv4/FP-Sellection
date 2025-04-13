@@ -4,45 +4,63 @@
 export const cars = [
     {
         item: '1',
-        name: 'BMW I8',
-        image: './img/bmw.png',
-        description: 'O BMW i8 é um dos modelos mais icônicos da montadora alemã, representando a fusão perfeita entre tecnologia e design. Lançado em 2014, o i8 rapidamente se tornou um símbolo de inovação no setor automotivo, destacando-se por sua motorização híbrida e estética futurista.',
-        category: 'cars'
+        name: 'BMW M8',
+        image: './img/veiculos/bmw.png',
+        description: 'O BMW M8 é um dos modelos mais icônicos da montadora alemã, representando a fusão perfeita entre tecnologia e design. Lançado em 2014, o i8 rapidamente se tornou um símbolo de inovação no setor automotivo, destacando-se por sua motorização híbrida e estética futurista.',
+        category: 'cars',
+        mark: 'BMW',
+        colorHEX: '#000000',
+        years: '2019'
     },
     {
         item: '2',
         name: 'Audi R8',
-        image: './img/audi.png',
+        image: './img/veiculos/audi.png',
         description: 'O Audi R8 é um dos supercarros mais desejados do mundo, destacando-se por sua potência, design e tecnologia. Lançado em 2006, o R8 foi o primeiro modelo de produção da Audi a contar com motor central-traseiro, o que lhe confere uma dirigibilidade excepcional.',
-        category: 'cars'
+        category: 'cars',
+        mark: 'Audi',
+        colorHEX: '#808080',
+        years: '2009'
     },
     {
         item: '3',
-        name: 'Lamborghini',
-        image: './img/lamborghini.png',
-        description: 'A Lamborghini é uma das marcas de carros esportivos mais icônicas do mundo, conhecida por seus modelos de alto desempenho e design arrojado. Fundada em 1963, a montadora italiana produz alguns dos supercarros mais desejados do mercado, como o Aventador, Huracán e Urus.',
-        category: 'cars'
+        name: 'Lamborghini Centenario',
+        image: './img/veiculos/lamborghini.png',
+        description: 'A Lamborghini centenario é uma das marcas de carros esportivos mais icônicas do mundo, conhecida por seus modelos de alto desempenho e design arrojado. Fundada em 1963, a montadora italiana produz alguns dos supercarros mais desejados do mercado, como o Aventador, Huracán e Urus.',
+        category: 'cars',
+        mark: 'Lamborghini',
+        colorHEX: '#808080',
+        years: '2016'
     },
     {
         item: '4',
         name: 'YAMAHA FAZER',
-        image: './img/yamaha-fazer.png',
+        image: './img/veiculos/yamaha-fazer.png',
         description: 'A Yamaha FZ16 é uma motocicleta padrão fabricada pela Yamaha desde 2008. A FZ16 é baseada na FZ1 e é vendida em vários mercados, incluindo a Índia, Indonésia, Colômbia, Argentina e Malásia.',
-        category: 'motorcycles'
+        category: 'motorcycles',
+        mark: 'Yamaha',
+        colorHEX: '#3C32CD',
+        years: '2005'
     },
     {
         item: '5',
         name: 'BMW RR',
-        image: './img/bmw-rr.png',
+        image: './img/veiculos/bmw-rr.png',
         description: 'A BMW S 1000 RR é uma superesportiva que se destaca pela sua tecnologia, desempenho e design. A moto foi lançada em 2009 e desde então tem sido aperfeiçoada.',
-        category: 'motorcycles'
+        category: 'motorcycles',
+        mark: 'BMW',
+        colorHEX: '#808080',
+        years: '2023'
     },
     {
         item: '6',
         name: 'YAMAHA YZF R6',
-        image: './img/yamaha-yzf-r6.png',
+        image: './img/veiculos/yamaha-yzf-r6.png',
         description: 'A Yamaha R6 é uma motocicleta esportiva com um motor de alto desempenho. A versão R6 Race foi desenvolvida exclusivamente para uso em pista.',
-        category: 'motorcycles'
+        category: 'motorcycles',
+        mark: 'Yamaha',
+        colorHEX: '#3C32CD',
+        years: '1999'
     },
 
 ];
@@ -67,7 +85,6 @@ function setSlider() {
 
     items = container.querySelectorAll('.list .item');  // Atualize items após a renderização
     lastPosition = items.length - 1;  // Atualize a última posição após a renderização
-    const selectOptions = document.getElementById('opcoes').value;
 
     if (!items.length) return;
 
