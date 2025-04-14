@@ -942,7 +942,7 @@ section {
                     grid-template-columns: repeat(1, 1fr);
                     margin-top: -35px;
                     gap: 10px;
-                    max-height: 728px;
+                    max-height: 650px;
                     overflow-y: auto;
 
                     & .card {
