@@ -957,10 +957,10 @@ section {
         & .modal-container {
             & .modal.active {
                 position: absolute;
-                top: 12%;
+                top: 8%;
                 left: 10%;
                 width: 335px;
-                height: 740px;
+                height: 725px;
                 border-radius: 10px;
 
                 & .closed-modal {
